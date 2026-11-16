@@ -13,15 +13,9 @@ public class UsedSparePartDAO extends DAO {
             return false;
         }
         try {
-            String stockSql = "UPDATE tblSparePart8 SET stockQuantity = stockQuantity - ? " +
-                              "WHERE id = ? AND stockQuantity >= ?";
-            try (PreparedStatement stockStatement = con.prepareStatement(stockSql)) {
-                stockStatement.setInt(1, usp.getQuantity());
-                stockStatement.setInt(2, usp.getSp().getId());
-                stockStatement.setInt(3, usp.getQuantity());
-                if (stockStatement.executeUpdate() != 1) {
-                    return false;
-                }
+            if (!new SparePartDAO(con).updateStockQuantity(
+                    usp.getSp().getId(), usp.getQuantity())) {
+                return false;
             }
 
             String insertSql = "INSERT INTO tblUsedSparePart8 (price, quantity, repairOrderID, sparePartID) VALUES (?, ?, ?, ?)";
