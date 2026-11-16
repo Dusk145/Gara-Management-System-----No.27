@@ -33,7 +33,7 @@ GaraManagementSystem/
 │   │   ├── resources/       # File cấu hình ứng dụng  
 │   │   └── webapp/          # Trang giao diện JSP, HTML, CSS, JS, hình ảnh  
 │   └── test/                # Unit Tests (nếu có)  
-├── gara_db.sql              # Kịch bản khởi tạo CSDL MySQL & dữ liệu mẫu  
+├── schema.sql              # Kịch bản khởi tạo CSDL MySQL & dữ liệu mẫu  
 ├── pom.xml                  # File cấu hình Maven Dependency  
 ├── .gitignore               # Khai báo file/thư mục không đẩy lên Git  
 └── README.md                # Tài liệu hướng dẫn dự án  
