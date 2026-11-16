@@ -1,0 +1,16 @@
+# Maven output
+target/
+
+# IDE configurations
+.idea/
+*.iml
+.smarttomcat/
+.vscode/
+.settings/
+.classpath
+.project
+
+# OS & Log files
+*.log
+.DS_Store
+Thumbs.db
